@@ -1,0 +1,14 @@
+{{extend './_layout/layout.html'}}
+
+{{block 'title'}}{{'看点资讯'}}{{/block}}
+
+{{block 'body'}}
+
+    {{include './_partial/charts.html'}}
+
+{{/block}}
+
+{{block 'script'}}
+<script src="/public/lib/highcharts.js"></script>
+<script src="/public/js/index.js"></script>
+{{/block}}

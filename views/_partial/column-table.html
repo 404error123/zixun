@@ -1,0 +1,74 @@
+<!-- 栏目页面内容 -->
+<div class="cnt">
+    <div class="btn-box">
+        <button class="btn btn-success add" data-toggle="modal" data-target="#mymodal">新增</button>
+        <button class="btn btn-warning dele-mun">批量删除</button>
+        <div class="input-group col-xs-4 pull-right">
+            <input type="text" class="form-control" placeholder="查找栏目">
+            <span class="input-group-btn">
+                <button class="btn btn-default btn-search" type="button">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+        <h4 class="alert alert-danger text-center">
+            <i class="glyphicon glyphicon-alert"></i>
+            <span></span>
+        </h4>
+        <div class="dele-tips">
+            <p>
+                <i class="glyphicon glyphicon-alert"></i>
+                <span></span>
+            </p>
+        </div>
+        <!-- 新增、修改弹出框start -->
+        <div class="modal" id="mymodal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">
+                            &times;
+                        </button>
+                        <h4 class="md-title">添加栏目</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="add-user">
+                            <p>栏目名称
+                                <span> 不合法</span>
+                            </p>
+                            <input type="text" id="lm-name">
+                            <p>父栏目</p>
+                            <select id="parent">
+                                <option>---请选择---</option>
+                            </select>
+                            <p>描述
+                                <span> 不合法</span>
+                            </p>
+                            <textarea id="describe"></textarea>
+                        </form>
+                        <button id="add-confirm" type="button" class="btn btn-success pull-right">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 新增、修改弹出框end -->
+    </div>
+    <!-- 表格start -->
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>全选</th>
+                    <th>栏目名称</th>
+                    <th>父栏目</th>
+                    <th>描述</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="col-table">
+                
+            </tbody>
+        </table>
+    </div>
+    <!-- 表格end -->
+</div>

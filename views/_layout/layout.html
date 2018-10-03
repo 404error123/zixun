@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{block 'title'}}{{/block}}</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/lib/iconfont.css">
+    <link rel="stylesheet" href="/public/css/comment.css">
+
+    {{block 'head'}}{{/block}}
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 侧边导航栏start -->
+            <div class="col-xs-2 visible-md visible-lg aside">
+                <h4>
+                    <a href="">
+                        <i class="iconfont icon-zixun"></i>
+                        <span>看点资讯</span>
+                    </a>
+                </h4>
+                <ul class="nav">
+                    <li>
+                        <a href="/" {{if index}} class="on" {{/if}}>
+                            <i class="iconfont icon-shouye"></i>
+                            <span>首页</span>
+                            <i class="iconfont icon-kuozhan"></i>
+                        </a>              
+                    </li>
+                    <li>
+                        <a href="/page/column.html" {{if column}} class="on" {{/if}}>
+                            <i class="iconfont icon-liebiao"></i>
+                            <span>栏目管理</span>
+                            <i class="iconfont icon-kuozhan"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/page/message.html" {{if message}} class="on" {{/if}}>
+                            <i class="iconfont icon-yun1"></i>
+                            <span>资讯管理</span>
+                            <i class="iconfont icon-kuozhan"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/page/user.html" {{if user}} class="on" {{/if}}>
+                            <i class="iconfont icon-ai-user"></i>
+                            <span>用户管理</span>
+                            <i class="iconfont icon-kuozhan"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 侧边导航栏end -->
+            <div class="col-xs-12 col-md-10 col-md-offset-2 main">
+                <div class="row">
+                    <!-- 头部区域start -->
+                    <div class="col-xs-12 cnt-header">
+                        <div class="cnt-title clearfix">
+                            <div class="pull-left">
+                                <i class="iconfont icon-liebiao1 show-nav"></i>
+                                <i class="iconfont icon-laba">
+                                    <b class="info-num">5</b>
+                                </i>
+                            </div>
+                            <div class="pull-right">
+                                <span class="head-img"></span>
+                                <span>张三</span>
+                                <i class="iconfont icon-kuozhan"></i>
+                            </div>
+                        </div>
+                        <!-- 手机端导航start -->
+                        <ul class="nav nav-pills nav-stacked">
+                            <li>
+                                <a href="/index.html">
+                                    <i class="iconfont icon-shouye"></i>
+                                    <span>首页</span>
+                                    <i class="iconfont icon-kuozhan"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/page/column.html">
+                                    <i class="iconfont icon-liebiao"></i>
+                                    <span>栏目管理</span>
+                                    <i class="iconfont icon-kuozhan"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/page/message.html">
+                                    <i class="iconfont icon-yun1"></i>
+                                    <span>资讯管理</span>
+                                    <i class="iconfont icon-kuozhan"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/page/user.html">
+                                    <i class="iconfont icon-ai-user"></i>
+                                    <span>用户管理</span>
+                                    <i class="iconfont icon-kuozhan"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- 手机端导航end -->
+                    </div>
+                    <!-- 头部区域end -->
+                </div>
+
+                {{block 'body'}}{{/block}} 
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $(".show-nav").click(function () {
+                var screeWidth = $(window).width();
+                if (screeWidth < 975) {
+                    $(".cnt-header .nav").slideToggle();
+                } else {
+                    $(".aside").toggleClass("shrink");
+                }
+            })
+        })
+    </script> 
+   
+    <script src="/node_modules/art-template/lib/template-web.js"></script>
+   
+    {{block 'script'}}{{/block}}
+
+</body>
+
+</html>

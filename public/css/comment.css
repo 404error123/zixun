@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+body{
+	background-color: #f0f0f0;
+}
+/*侧边导航栏start*/
+.container-fluid>.row>div.aside{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	padding: 0;
+	color: #fff;
+	background-color: #282830;
+	transition: width 0.2s;
+	z-index: 2;
+}
+.container-fluid>.row>div.aside h4{
+	height: 60px;
+	margin: 0 0 60px 0;
+	line-height: 60px;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #3d556d;
+}
+.container-fluid>.row>div.aside h4 i{
+	font-size: 22px;
+	margin-right: 20px;
+}
+.container-fluid>.row>div.aside a{
+	display: block;
+	color: #fff;
+	height: 40px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.container-fluid>.row>div.aside li{
+	border-bottom: 1px solid #333;
+}
+.container-fluid>.row>div.aside li a:hover,
+.container-fluid>.row>div.main .cnt-header .nav a:hover,
+.container-fluid>.row>div.aside li a:focus,
+.container-fluid>.row>div.main .cnt-header .nav a:focus,
+.container-fluid>.row>div.aside li a.on{
+	background-color: #333;
+}
+.container-fluid>.row>div.aside li a:focus,
+.container-fluid>.row>div.main .cnt-header .nav a:focus{
+	background-color: #282830;
+}
+.container-fluid .aside li a i:first-child,
+.container-fluid>.row>div.main .cnt-header .nav a i:first-child{
+	position: absolute;
+	left: 20px;
+}
+.container-fluid .aside li a span,
+.container-fluid>.row>div.main .cnt-header .nav a span{
+	padding-left: 45px;
+}
+.container-fluid .aside li a i:last-child,
+.container-fluid>.row>div.main .cnt-header .nav a i:last-child{
+	position: absolute;
+	right: 25px;
+	font-size: 18px;
+	font-weight: bold;
+}
+/*侧边导航栏end*/
+
+/*内容区*/
+.container-fluid>.row>div.main{
+	padding-bottom: 20px;
+	transition: all 0.2s;
+	background-color: #f0f0f0;
+}
+.container-fluid>.row>div.main .cnt-header{
+	padding: 0;
+	background-color: #fff;
+}
+.container-fluid>.row>div.main .cnt-title{
+	padding: 0 20px;
+	line-height: 60px;
+}
+.container-fluid .main .cnt-title .pull-left i{
+	position: relative;
+	font-size: 26px;
+	cursor: pointer;
+}
+.container-fluid .main .cnt-title .pull-left b.info-num{
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	border-radius: 50%;
+	background-color: #e05140;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+}
+.container-fluid .main .cnt-title i.icon-laba{
+	margin-left: 40px;
+}
+.container-fluid .main .cnt-title .pull-right{
+	margin-right: 40px;
+}
+.container-fluid .main .cnt-title .pull-right .head-img{
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	margin-right: 10px;
+	border-radius: 50%;
+	vertical-align: middle;
+	background-color: #f0f0f0;
+}
+.container-fluid>.row>div.main .cnt-header .nav{
+	display: none;
+	padding: 10px 0;
+	margin-bottom: 20px;
+	border-top: 1px solid #f0f0f0;
+	line-height: 16px;
+	text-indent: 2em;
+	background-color: #282830;
+}
+.container-fluid>.row>div.main .cnt-header .nav a{
+	color: #fff;
+	border-radius: 0;
+}
+/*内容 图表区*/
+.container-fluid .main .data-list1,
+.container-fluid .main .data-list2{
+	padding: 10px 15px 0 15px;
+}
+.container-fluid .main .data-list1>div{
+	height: 360px;
+	padding: 20px 10px;
+}
+.container-fluid .main .data-list1>div.together>div{
+	height: 90px;
+	padding-top: 10px;
+	background-color: #fff;
+	margin-bottom: 25px;
+}
+.data-list1 .img-box{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin: 0 6%;
+}
+.data-list1 .img-box img{
+	width: 70px;
+}
+.data-list1 .together .word h3{
+	margin-top: 10px;
+}
+.container-fluid .main .data-list1>div.zhexian{
+	padding: 20px 10px;
+}
+.container-fluid .main .data-list1>div.zhexian .chart{
+	height: 100%;
+}
+.container-fluid .main .data-list1>div.sm-tu>div.chart{
+	height: 150px;
+	margin-bottom: 20px;
+}
+.container-fluid .main .chart{
+	background-color: #fff;
+}
+.container-fluid .main .chart>div{
+	height: 100%;
+}
+.container-fluid .main .chart .highcharts-container{
+	margin: 0 auto;
+}
+.container-fluid .main .data-list2>div{
+	height: 480px;
+	padding: 0 10px 20px 10px;
+}
+.container-fluid .main .data-list2>div.huan>div.chart{
+	height: 100%;
+}
+.container-fluid .main .data-list2>div.yibiao>div.chart{
+	height: 220px;
+	margin-bottom: 20px;
+}
+@media screen and (min-width: 992px){
+	.container-fluid>.row>div.aside.shrink{
+		width: 80px;
+	}
+	.container-fluid>.row>div.aside.shrink + div{
+		margin-left: 80px;
+		width: calc(100% - 80px);
+	}
+	.container-fluid>.row>div.aside.shrink span,
+	.container-fluid>.row>div.aside.shrink li a i:last-child{
+		display: none;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+	.container-fluid .main .data-list1>div.together{
+		height: auto;
+		padding-bottom: 0;
+	}
+	.container-fluid .main .data-list1>div.together>div:not(:first-child){
+		border-left: 20px solid #f0f0f0;
+	}
+	.container-fluid .main .data-list1>div.together>div{
+		margin-bottom: 5px;
+	}
+}

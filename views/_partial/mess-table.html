@@ -1,0 +1,91 @@
+<!-- 资讯页面内容 -->
+<div class="cnt table-responsive">
+    <div class="btn-box">
+        <button class="btn btn-success add" data-toggle="modal" data-target="#mymodal">新增</button>
+        <button class="btn btn-warning dele-mun">批量删除</button>
+        <h4 class="alert alert-danger text-center">
+            <i class="glyphicon glyphicon-alert"></i>后台异常！未查询到当前页的数据！可以试着努力翻几页试一试！
+        </h4>
+        <div class="dele-tips">
+            <p>
+                <i class="glyphicon glyphicon-alert"></i>
+                <span></span>
+            </p>
+        </div>
+        <!-- 新增、修改弹出框start -->
+        <div class="modal" id="mymodal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">
+                            &times;
+                        </button>
+                        <h4 class="md-title">发布资讯</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="add-user" class="clearfix">
+                            <p>标题
+                                <span> 不合法</span>
+                            </p>
+                            <input type="text" id="lm-name" placeholder="请输入文章标题">
+                            <p>所属栏目</p>
+                            <select id="parent">
+                                <option>---请选择---</option>
+                            </select>
+                            <p>列表样式</p>
+                            <div class="list-style clearfix">
+                                <div class="list1 list">1</div>
+                                <div class="list2 list">2</div>
+                            </div>
+                            <p>列表缩略图</p>
+                            <div class="thumbnail">上传</div>
+                            <p>背景音乐
+                                <span> 不合法</span>
+                            </p>
+                            <input type="text" id="music">
+                            <p>正文
+                                <span> 不合法</span>
+                            </p>
+                            <textarea id="cnt" placeholder="请输入8字以上内容"></textarea>
+                            <button id="add-confirm" type="button" class="btn btn-success pull-right">确认</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 新增、修改弹出框end -->
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>全选</th>
+                    <th>文章标题</th>
+                    <th>所属栏目</th>
+                    <th>背景音乐</th>
+                    <th>作者</th>
+                    <th>发布时间</th>
+                    <th>阅读次数</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="mess-table">
+               
+            </tbody>
+        </table>
+    </div>
+    <div class="row text-center">
+        <ul class="pager">
+            <li class="previous">
+                <a href="#">
+                    <span aria-hidden="true">&larr;</span> 上一页</a>
+            </li>
+            <li class="number text-danger">10</li>
+            <li class="next">
+                <a href="#">下一页
+                    <span aria-hidden="true">&rarr;</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

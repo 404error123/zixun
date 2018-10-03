@@ -1,0 +1,53 @@
+{{extend '../_layout/layout.html'}}
+
+{{block 'title'}}{{'用户管理'}}{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/module.css">
+{{/block}}
+
+{{block 'body'}}
+
+    {{include '../_partial/user-list.html'}}
+
+{{/block}}
+
+{{block 'script'}}
+<script id="user-tm" type="text/html">
+    <% for(var i = 0, len = data.length; i < len; i++) { %>
+    <% var open = data[i].enabled?"open":"" %>
+     <div class="col-xs-8 col-xs-offset-2 col-sm-offset-0 col-sm-6 col-lg-3">
+        <div class="list-cnt">
+            <div class="img-box">
+                <img src="<%= data[i].userface %>" alt="">
+            </div>
+            <p>
+                <span class="username">用户名</span>
+                <span id="user-name" title="<%= data[i].username %>"><%= data[i].username %></span>
+            </p>
+            <p>
+                <span class="realname">真实姓名</span>
+                <span id="real-name" title="<%= data[i].nickname %>"><%= data[i].nickname %></span>
+            </p>
+            <p>
+                <span class="email">email</span>
+                <span id="email" title="<%= data[i].email %>"><%= data[i].email %></span>
+            </p>
+            <p class="status-box">
+                <span class="status">状态</span>
+                <span class="dot-move <%= open %>" data-id="<%= data[i].id %>">
+                    <b class="op">开启</b>
+                    <i class="dot"></i>
+                    <b class="cl">关闭</b>
+                </span>
+            </p>
+            <p class="btn-boxs">
+                <button class="btn btn-success change" data-no="<%= data[i].password %>">修改</button>
+                <button class="btn btn-warning delete" data-id="<%= data[i].id %>">删除</button>
+            </p>
+        </div>
+    </div>
+    <% } %>
+</script>
+<script src="/public/js/user.js"></script>
+{{/block}}

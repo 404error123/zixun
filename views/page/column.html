@@ -1,0 +1,35 @@
+{{extend '../_layout/layout.html'}}
+
+{{block 'title'}}{{'栏目管理'}}{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/module.css">
+{{/block}}
+
+{{block 'body'}}
+
+    {{include '../_partial/column-table.html'}}
+
+{{/block}}
+
+{{block 'script'}}
+<script id="col-tm" type="text/html">
+    <% for(var i = 0, len = data.length; i < len; i++){ %>
+    <% var parentName = data[i].parent?data[i].parent.name:"无" %>
+    <% var parentId = data[i].parent?data[i].parent.id:"-1" %>
+    <tr>
+        <td>
+            <label><input type="checkbox"></label>
+        </td>
+        <td><%= data[i].name %></td>
+        <td><%= parentName %></td>
+        <td><%= data[i].comment %></td>
+        <td data-id="<%= data[i].id %>" data-parent="<%= parentId %>">
+            <i class="glyphicon glyphicon-pencil change" title="修改"></i>
+            <i class="glyphicon glyphicon-trash delete" title="删除"></i>
+        </td>
+    </tr>
+    <% } %>
+</script>
+<script src="/public/js/column.js"></script>
+{{/block}}

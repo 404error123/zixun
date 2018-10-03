@@ -1,0 +1,39 @@
+{{extend '../_layout/layout.html'}}
+
+{{block 'title'}}{{'资讯管理'}}{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/module.css">
+{{/block}}
+
+{{block 'body'}}
+
+    {{include '../_partial/mess-table.html'}}
+
+{{/block}}
+
+{{block 'script'}}
+<script id="mess-tm" type="text/html">
+    <% for(var i = 0, len = list.length; i < len; i++) { %>
+    <% var lanmu = list[i].category?list[i].category.id:"无" %>
+    <tr class="hid-tr">
+        <td>
+            <label>
+                <input type="checkbox">
+            </label>
+        </td>
+        <td><%= list[i].title %></td>
+        <td><%= lanmu %></td>
+        <td><%= list[i].music %></td>
+        <td><%= list[i].author %></td>
+        <td><%= list[i].publishtime %></td>
+        <td><%= list[i].readtimes %></td>
+        <td data-id="<%= list[i].id %>" data-lu-id="<%= lanmu %>">
+            <i class="glyphicon glyphicon-pencil change"></i>
+            <i class="glyphicon glyphicon-trash delete"></i>
+        </td>
+    </tr>
+    <% } %>
+</script>
+<script src="/public/js/message.js"></script>
+{{/block}}

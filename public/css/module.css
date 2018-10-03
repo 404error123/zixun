@@ -1,0 +1,309 @@
+@charset "utf-8";
+/*内容区*/
+button.btn,
+button.btn:focus,
+button.btn:active,
+button.btn:visited{
+	outline: 0;
+}
+button:not(.btn-search){
+	border: 0;
+}
+.cnt{
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.cnt .btn-box{
+	margin-bottom: 20px;
+}
+.cnt .btn-box>button{
+	margin-right: 20px;
+}
+.cnt .btn-box button{
+	padding: 6px 22px;
+}
+.cnt .btn-box button.push{
+	margin-left: 20px;
+}
+.cnt .btn-box .input-group.pull{
+	margin-right: 50px;
+}
+.cnt .btn-box .alert{
+	display: none;
+}
+.cnt .btn-box .alert i{
+	margin-right: 20px;
+}
+.cnt .btn-box .dele-tips{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -60px;
+	margin-left: -100px;
+	width: 200px;
+	height: 120px;
+	line-height: 120px;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0.3);
+	z-index: 10;
+}
+.cnt .btn-box .dele-tips i{
+	font-size: 20px;
+	margin-right: 10px;
+	color: #f0ad4e;
+}
+/*模态框start*/
+.cnt .btn-box #mymodal{
+    left: auto;
+    margin-right: -17px;
+    background-color: #fff;
+}
+.cnt .btn-box .modal-dialog{
+	margin: 0;
+	width: 460px;
+	height: 100%;
+}
+.cnt .btn-box .modal-dialog .modal-content{
+	height: 100%;
+	border-radius: 0;
+	box-shadow: none;
+	border: 0;
+	color: #666;
+}
+.cnt .btn-box .modal-dialog .modal-content h4{
+	font-size: 14px;
+	text-align: center;
+	font-weight: normal;
+}
+.modal-dialog .modal-content .modal-body{
+	padding: 20px 40px;
+}
+.modal-dialog .modal-body form>input:not(#head-url),
+.modal-dialog .modal-content .modal-body textarea,
+.modal-dialog .modal-content .modal-body select{
+	width: 100%;
+	border: 1px solid #ccc;
+	text-indent: 1em;
+	height: 30px;
+}
+#mymodal.cd-user .cd-hid{
+	display: none;
+}
+.modal-dialog .modal-content .modal-body label{
+	font-weight: normal;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.modal-dialog .modal-content .modal-body textarea{
+	height: 100px;
+}
+.modal-dialog .modal-content .modal-body p{
+	margin: 16px 0;
+}
+.modal-dialog .modal-content .modal-body p span{
+	display: none;
+}
+.modal-dialog .modal-content .modal-body p.warning span{
+	display: inline;
+	color: #f40;
+}
+.modal-dialog .modal-body p.warning+input:not(#head-url),
+.modal-dialog .modal-content .modal-body p.warning+textarea{
+	border: 1px solid #f40;
+}
+.modal-dialog .modal-content .modal-body button{
+	margin-top: 30px;
+}
+.modal-backdrop.in{
+	opacity: 0.15;
+}
+.modal-dialog .modal-content .modal-body .list-style>div{
+	float: left;
+	width: 180px;
+	height: 80px;
+	border: 1px solid #eee;
+	cursor: pointer;
+}
+.modal-dialog .modal-content .modal-body .list-style>div.select{
+	border-color: #449d44;
+}
+.modal-dialog .modal-content .modal-body .list-style>div.list1{
+	margin-right: 10px;
+}
+.modal-dialog .modal-content .modal-body .thumbnail{
+	height: 80px;
+	width: 200px;
+}
+/*模态框end*/
+
+/*表格start*/
+.cnt table thead tr th{
+	padding: 14px 8px;
+}
+.cnt table th,
+.cnt table td{
+	text-align: center;
+}
+.cnt table th:first-child{
+	cursor: pointer;
+}
+.cnt table th:first-child:hover{
+	color: #ec971f;
+}
+.cnt table th.all{
+	color: #f40;
+}
+.cnt table td:last-child{
+	width: 160px;
+}
+.cnt table tr input[type='checkbox']{
+	width: 16px;
+	height: 16px;
+}
+.cnt table tr label{
+	display: block;
+	cursor: pointer;
+}
+.cnt table tr i{
+	margin: 0 20px;
+	cursor: pointer;
+}
+.cnt table tr i:hover{
+	color: #f40;
+}
+.cnt .pager{
+	padding: 0 30%;
+}
+/*表格end*/
+
+/*用户管理区*/
+.cnt .user-list{
+	margin-top: 20px;
+	padding-bottom: 60px;
+	font-size: 12px;
+	color: #666;
+}
+.cnt .user-list button{
+	padding: 6px 20px;
+}
+.cnt .user-list button.delete{
+	margin-left: 20px;
+}
+.cnt .user-list button.close:hover{
+	color: #e05140;
+}
+.cnt .user-list>div{
+	margin-bottom: 40px;
+}
+.cnt .user-list>div .list-cnt{
+	padding: 10px 0;
+	width: 90%;
+	background-color: #fff;
+	box-shadow: 0 0 5px #ccc;
+}
+.cnt .user-list>div .list-cnt .img-box{
+	width: 80px;
+	height: 80px;
+	margin: 10px auto 20px auto;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: #eee;
+}
+.cnt .user-list>div .list-cnt img{
+	width: 80px;
+	height: 80px;
+}
+.cnt .user-list>div .list-cnt p{
+	padding-left: 24%;
+	padding-right: 10%;
+	line-height: 20px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.cnt .user-list>div .list-cnt p span:first-child{
+	display: inline-block;
+	width: 80px;
+}
+.cnt .user-list>div .list-cnt p.status-box span.dot-move{
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 26px;
+	line-height: 26px;
+	background-color: #ddd;
+	border-radius: 13px;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+}
+.cnt .user-list>div .list-cnt p.status-box span.dot-move i{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #fff;
+	top: 3px;
+	left: 3px;
+	transition: left 0.3s;
+}
+.cnt .user-list>div .list-cnt p.status-box span.dot-move b{
+	font-weight: normal;
+	color: #fff;
+	position: absolute;
+	top: 0;
+}
+.cnt .user-list>div .list-cnt p.status-box span.dot-move b.op{
+	left: 10px;
+	display: none;
+}
+.cnt .user-list>div .list-cnt p.status-box span.dot-move b.cl{
+	right: 10px;
+}
+.cnt .user-list>div .list-cnt p.status-box .dot-move.open{
+	background-color: #68b828;
+}
+.cnt .user-list>div .list-cnt p.status-box .dot-move.open i{
+	left: 37px;
+}
+.cnt .user-list>div .list-cnt p.status-box .dot-move.open b.cl{
+	display: none;
+}
+.cnt .user-list>div .list-cnt p.status-box .dot-move.open b.op{
+	display: block;
+}
+.cnt .user-list>div .list-cnt p.btn-boxs{
+	margin-top: 20px;
+}
+@media screen and (max-width: 1400px) and (min-width: 1200px){
+	.cnt .user-list>div{
+		width: 33.33%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.cnt .user-list>div{
+		width: 100%;
+		margin: 0 auto 40px auto;
+	}
+	.cnt .user-list>div .list-cnt p span:first-child{
+		width: 45%;
+	}
+	.cnt .user-list>div .list-cnt{
+		width: 100%;
+	}
+	.cnt .user-list>div .list-cnt .delete{
+		margin-left: 15%;
+	}
+	.cnt .btn-box .modal-dialog{
+		width: 100%;
+	}
+	.cnt .btn-box #mymodal{
+	    left: 0;
+	}
+}
