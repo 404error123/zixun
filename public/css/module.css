@@ -199,6 +199,7 @@ button:not(.btn-search){
 	color: #e05140;
 }
 .cnt .user-list>div{
+	height: 310px;
 	margin-bottom: 40px;
 }
 .cnt .user-list>div .list-cnt{
