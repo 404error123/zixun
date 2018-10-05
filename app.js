@@ -20,10 +20,6 @@ app.use(function(req, res){
     res.render('404.html')
 })
 
-app.use(function(req, res){
-    res.render('404.html')
-})
-
 app.listen(2018, function(){
     console.log('running')
 })
