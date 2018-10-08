@@ -106,9 +106,7 @@ $(function(){
 	}
 	// 清空模态框内容
 	$('#mymodal').on('hide.bs.modal',function(){
-		$("#lm-name").val("");
-		$("#describe").val("");
-		$(":selected").prop("selected",false);
+		$("#add-user").get(0).reset();
 		$(".modal-body p").removeClass("warning");
 		$("select").removeData("current-id");
 	});

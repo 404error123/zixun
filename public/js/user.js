@@ -128,15 +128,10 @@ $(function(){
 	}
 	// 清空模态框内容、警告样式
 	$('#mymodal').on('hide.bs.modal',function(){
-		$("#us-name").val("");
-		$("#pwd").val("");
-		$("#real-name").val("");
-		$("#repwd").val("");
-		$("#email").val("");
+		$("#add-user").get(0).reset();
 		$(".modal-body p").removeClass("warning");
 		$("#add-confirm").removeData("id");
-		$("#head-url").removeData("url").val("");
-		$("label #op").prop("checked",true);
+		$("#head-url").removeData("url");
 	});
 	// 查找用户
 	$(".btn-search").click(findColumn);

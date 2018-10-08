@@ -126,12 +126,9 @@ $(function(){
 	}
 	// 清空模态框内容
 	$('#mymodal').on('hide.bs.modal',function(){
-		$("#lm-name").val("");
-		$("#cnt").val("");
-		$(":selected").prop("selected",false);
+		$("#add-user").get(0).reset();
 		$(".modal-body p").removeClass("warning");
 		$("select").removeData("id");
-		$("#music").val("");
 		$(".list-style>div").removeClass("select");
 	});
 	// 表单验证
