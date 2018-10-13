@@ -41,7 +41,8 @@ body{
 .container-fluid>.row>div.main .cnt-header .nav a:hover,
 .container-fluid>.row>div.aside li a:focus,
 .container-fluid>.row>div.main .cnt-header .nav a:focus,
-.container-fluid>.row>div.aside li a.on{
+.container-fluid>.row>div.aside li a.on,
+.container-fluid>.row>div.main .cnt-header .nav a.on{
 	background-color: #333;
 }
 .container-fluid>.row>div.aside li a:focus,
